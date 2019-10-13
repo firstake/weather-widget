@@ -1,0 +1,427 @@
+@font-face {
+  font-family: 'Avenir Next Cyr Bold';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/AvenirNextCyr-Bold.woff") format("woff"), url("../fonts/AvenirNextCyr-Bold.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  background: url(../images/forest.jpg) no-repeat 50% 50%/cover;
+  font-family: 'Avenir Next Cyr Bold', sans-serif;
+}
+
+.widget-container {
+  -ms-grid-column-align: center;
+  -ms-grid-row-align: center;
+  margin: auto;
+  width: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 200px 200px;
+  grid-template-rows: repeat(2, 200px);
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.widget-container:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.widget-container:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.widget-container:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.widget-container:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.widget-container:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.widget-container:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.city-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 27.5% 45% 27.5%;
+  grid-template-columns: 27.5% 45% 27.5%;
+  -ms-grid-rows: 16% 44% 8% 10% 22%;
+  grid-template-rows: 16% 44% 8% 10% 22%;
+}
+
+.city-card:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.city-card:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.city-card:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.city-card:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.city-card:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.city-card:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.city-card:nth-child(10) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(11) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+}
+
+.city-card:nth-child(12) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+}
+
+.city-card:nth-child(13) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(14) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+}
+
+.city-card:nth-child(15) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.city-card:nth-child(1) {
+  background: #06b3db;
+}
+
+.city-card:nth-child(2) {
+  background: #4ed486;
+}
+
+.city-card:nth-child(3) {
+  background: #6139f6;
+}
+
+.city-card:nth-child(4) {
+  background: #e3b63d;
+}
+
+.city-card:nth-child(5) {
+  background: #dc3d66;
+}
+
+.city-card:nth-child(6) {
+  background: #bd54cd;
+}
+
+.city-card:nth-child(5) {
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
+  -ms-grid-rows: 50% 50%;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.city-card:nth-child(5) > :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(5) > :nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.city-card:nth-child(5) .city-card__icon-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-align: center;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -ms-grid;
+  display: grid;
+}
+
+.city-card__icon-container {
+  -ms-grid-column: 2;
+  -ms-grid-column-align: center;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: 1fr;
+}
+
+.city-card__icon {
+  -webkit-filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.25));
+  -ms-grid-column-align: center;
+  -ms-grid-row-align: center;
+  margin: auto;
+}
+
+.city-card__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-align: center;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  margin: auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.week-forecast {
+  justify-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 100%;
+  grid-template-rows: 100%;
+  padding: 4% 10%;
+  background: #bd3559;
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.week-forecast > :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.week-forecast > :nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.week-forecast > :nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.week-forecast > :nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.day-forecast {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.day-forecast > :nth-child(-n+3) {
+  -ms-grid-column-align: center;
+  -ms-grid-row-align: center;
+  margin: auto;
+}
+
+.day-forecast > :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.day-forecast > :nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.day-forecast > :nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.day-forecast__text, .day-forecast__temp {
+  font-size: 12px;
+  color: #fff;
+}
+
+.day-forecast__icon {
+  width: 24px;
+  height: auto;
+}
+
+@media screen and (max-width: 660px) {
+  html {
+    height: auto;
+  }
+  .widget-container {
+    width: calc(100% - 60px);
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 200px 200px 200px;
+    grid-template-rows: repeat(3, 200px);
+  }
+  .widget-container > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .widget-container > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .widget-container > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .widget-container > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .widget-container > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .widget-container > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+}
+
+@media screen and (min-height: 660px) and (min-width: 460px) {
+  html {
+    height: 100%;
+  }
+}
+
+@media screen and (max-height: 1560px) and (max-width: 460px) {
+  .widget-container {
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-height: 660px) {
+  .widget-container {
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .widget-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 250px 250px 250px 250px 250px 250px;
+    grid-template-rows: repeat(6, 250px);
+  }
+  .widget-container > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .widget-container > :nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .widget-container > :nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .widget-container > :nth-child(4) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .widget-container > :nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .widget-container > :nth-child(6) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .city-card:nth-child(5) .city-card__icon {
+    height: 65%;
+  }
+  .city-card__icon {
+    height: 90%;
+  }
+  .city-card__text {
+    font-size: 20px;
+  }
+  .day-forecast__icon {
+    width: 30px;
+  }
+  .day-forecast__text, .day-forecast__temp {
+    font-size: 16px;
+  }
+}

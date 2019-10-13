@@ -1,0 +1,190 @@
+// Declaration of variables, mixins etc.
+
+$chicago_bg: #06b3db;
+$seattle_bg: #4ed486;
+$brooklyn_bg: #6139f6;
+$portland_bg: #e3b63d;
+$denver_bg: #dc3d66;
+$denver_bg_darken: #bd3559;
+$san-jose_bg: #bd54cd;
+
+$city-colors: (
+  nth-child(1): $chicago_bg,
+  nth-child(2): $seattle_bg,
+  nth-child(3): $brooklyn_bg,
+  nth-child(4): $portland_bg,
+  nth-child(5): $denver_bg,
+  nth-child(6): $san-jose_bg
+);
+
+$small_shadow: 0px 1px 0px rgba(0,0,0,0.25);
+
+@mixin flex-both-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg-cover-center($path_to_img) {
+  background: url(#{$path_to_img}) no-repeat 50% 50%/cover;
+}
+
+// Here comes the CSS
+
+@font-face {
+  font: {
+  	family: 'Avenir Next Cyr Bold';
+  	weight: normal;
+  	style: normal;
+  	display: swap;
+  }
+  src: url('../fonts/AvenirNextCyr-Bold.woff') format('woff'),
+  url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+}
+
+html, body {
+  height: 100%;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include flex-both-centered;
+  @include bg-cover-center("../images/forest.jpg");
+  flex-direction: column;
+  font-family: 'Avenir Next Cyr Bold', sans-serif;
+}
+
+.widget-container {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.city-card {
+  @include flex-both-centered;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+
+    @each $elem, $city in $city-colors {
+        &:#{$elem} {
+          background: $city;
+        }
+    }
+	
+	&:nth-child(5) {
+	  .city-card__icon-container {
+	  	margin: 0;
+	  	height: 50%;
+	  }
+	
+	  .city-card__icon {
+	  	height: 63%;
+	  }
+	}
+	
+	&__icon-container {
+  	@include flex-both-centered;
+    flex-direction: column;
+  	width: 45%;
+  	height: 38%;
+  	margin-bottom: 8%;
+	}
+
+	&__icon {
+  	-webkit-filter: drop-shadow($small_shadow);
+    filter: drop-shadow($small_shadow);
+	}
+
+	&__text {
+	  font: {
+        size: 16px;
+        weight: bold;
+      }
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: $small_shadow;
+	}
+}
+
+.week-forecast {
+  @include flex-both-centered;
+  width: 100%;
+  height: 50%;
+  background: $denver_bg_darken;
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.day-forecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 65%;
+  width: 15%;
+  margin: 0 5px;
+
+  	&__text, &__temp {
+  	  font-size: 12px;
+      color: #fff;
+  	}
+
+    &__icon {
+      width: 24px;
+      height: auto;
+    }
+}
+
+@media screen and (max-width: 660px) {
+  html {
+    height: auto;
+  }
+  .widget-container {
+    width: calc(100% - 60px);
+  }
+  .city-card {
+  	width: 50%;
+  }
+}
+
+@media screen and (min-height: 660px) and (min-width: 460px) {
+  html {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  .city-card {
+    width: 100%;
+    min-width: 250px;
+    height: 250px;
+
+    &__icon {
+      height: 100%;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+  
+  .day-forecast {
+    &__icon {
+      width: 30px;
+    }
+
+  	&__text, &__temp {
+  	  font-size: 16px;
+  	}
+  }
+
+}

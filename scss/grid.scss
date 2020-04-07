@@ -238,14 +238,7 @@ body {
   }
 }
 
-@media screen and (max-height: 660px) {
-  .widget-container {
-    margin: 30px auto;
-  }
-}
-
 @media screen and (max-width: 460px) {
-
   .widget-container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;

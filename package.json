@@ -1,0 +1,16 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3"
+  },
+  "scripts": {
+    "dev-flexbox": "parcel serve flexbox.html --port 3000",
+    "build-flexbox": "parcel build flexbox.html --out-dir flexbox-prod",
+    "dev-grid": "parcel serve grid.html --port 4000",
+    "build-grid": "parcel build grid.html --out-dir grid-prod"
+  },
+  "author": "Vladislav Tereshkin"
+}

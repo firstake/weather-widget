@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Author: Vladislav Tereshkin -->
     <meta charset="utf-8">
     <title>Flexbox: Weather Widget</title>
     <link rel="shortcut icon" href="./images/favicon.png">
@@ -9,79 +8,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="widget-container">
-    
+    <div class="widget-block">
       <div class="city-card">
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/cr.svg" alt="light rain">
-        </div>
-        <p class="city-card__text">Chicago / 23°</p>
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/cr.svg" alt="light rain">
+        </figure>
+        <h2 class="city-card__title">Chicago / 23°</h2>
       </div>
       
       <div class="city-card">
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/fog.svg" alt="fog">
-        </div>
-        <p class="city-card__text">seattle / 34°</p>
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/fog.svg" alt="fog">
+        </figure>
+        <h2 class="city-card__title">seattle / 34°</h2>
       </div>
       
       <div class="city-card">
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/cs.svg" alt="partly cloudy">
-        </div>
-        <p class="city-card__text">brooklyn / 55°</p>
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/cs.svg" alt="partly cloudy">
+        </figure>
+        <h2 class="city-card__title">brooklyn / 55°</h2>
       </div>
       
       <div class="city-card">
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/css.svg" alt="sun ang hail">
-        </div>
-        <p class="city-card__text">portland / 27°</p>
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/css.svg" alt="sun and hail">
+        </figure>
+        <h2 class="city-card__title">portland / 27°</h2>
       </div>
       
       <div class="city-card">
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/wind.svg" alt="wind">
+        </figure>
     
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/wind.svg" alt="wind">
+        <div class="forecast-block">
+          <section class="forecast-block__item">
+            <h3 class="forecast-block__item-title">MON</h3>
+            <img class="forecast-block__item-image" src="./images/cr.svg" alt="light rain">
+            <p class="forecast-block__item-info">22°</p>
+          </section>
+    
+          <section class="forecast-block__item">
+            <h3 class="forecast-block__item-title">TUE</h3>
+            <img class="forecast-block__item-image" src="./images/cr.svg" alt="light rain">
+            <p class="forecast-block__item-info">18°</p>
+          </section>
+    
+          <section class="forecast-block__item">
+            <h3 class="forecast-block__item-title">WEN</h3>
+            <img class="forecast-block__item-image" src="./images/cloud.svg" alt="cloudy">
+            <p class="forecast-block__item-info">19°</p>
+          </section>
+    
+          <section class="forecast-block__item">
+            <h3 class="forecast-block__item-title">THU</h3>
+            <img class="forecast-block__item-image" src="./images/cs.svg" alt="partly cloudy">
+            <p class="forecast-block__item-info">14°</p>
+          </section>
         </div>
-    
-        <div class="week-forecast">
-    
-          <div class="day-forecast">
-            <p class="day-forecast__text">MON</p>
-            <img class="day-forecast__icon" src="./images/cr.svg" alt="light rain">
-            <p class="day-forecast__temp">22°</p>
-          </div>
-    
-          <div class="day-forecast">
-            <p class="day-forecast__text">TUE</p>
-            <img class="day-forecast__icon" src="./images/cr.svg" alt="light rain">
-            <p class="day-forecast__temp">18°</p>
-          </div>
-    
-          <div class="day-forecast">
-            <p class="day-forecast__text">WEN</p>
-            <img class="day-forecast__icon" src="./images/cloud.svg" alt="cloudy">
-            <p class="day-forecast__temp">19°</p>
-          </div>
-    
-          <div class="day-forecast">
-            <p class="day-forecast__text">THU</p>
-            <img class="day-forecast__icon" src="./images/cs.svg" alt="partly cloudy">
-            <p class="day-forecast__temp">14°</p>
-          </div>
-    
-        </div>
-    
       </div>
       
       <div class="city-card">
-        <div class="city-card__icon-container">
-          <img class="city-card__icon" src="./images/cloud.svg" alt="cloudy">
-        </div>
-        <p class="city-card__text">san jose / 47°</p>
+        <figure class="city-card__figure">
+          <img class="city-card__image" src="./images/cloud.svg" alt="cloudy">
+        </figure>
+        <h2 class="city-card__title">san jose / 47°</h2>
       </div>
-      
     </div>
   </body>
 </html>

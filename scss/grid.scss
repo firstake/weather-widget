@@ -54,13 +54,14 @@ $small_shadow: 0px 1px 0px rgba(0,0,0,0.25);
   url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype');
 }
 
-html, body {
-  height: 100%;
-}
-
-body, p {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -72,7 +73,7 @@ body {
   font-family: 'Avenir Next Cyr Bold', sans-serif;
 }
 
-.widget-container {
+.widget-block {
   @include ie-grid-margin-auto;
   @include ie-nodes-location('&', 3, 2, '');
   margin: auto;
@@ -110,7 +111,7 @@ body {
   
       @include ie-nodes-location('&', 1, 2, ' > ');
 
-      .city-card__icon-container {
+      .city-card__figure {
         -ms-grid-column: 1;
         -ms-grid-column-align: center;
         -ms-grid-column-span: 1;
@@ -123,7 +124,7 @@ body {
       }  
     }
   
-    &__icon-container {
+    &__figure {
       -ms-grid-column: 2;
       -ms-grid-column-align: center;
       -ms-grid-column-span: 1;
@@ -137,14 +138,14 @@ body {
       -ms-grid-rows: 1fr;
     }
 
-    &__icon {
+    &__image {
       -webkit-filter: drop-shadow($small_shadow);
       filter: drop-shadow($small_shadow);
       @include ie-grid-margin-auto;
       margin: auto;
     }
 
-    &__text {
+    &__title {
       -ms-grid-column: 1;
       -ms-grid-column-align: center;
       -ms-grid-column-span: 3;
@@ -163,7 +164,7 @@ body {
     }
 }
 
-.week-forecast {
+.forecast-block {
   @include ie-nodes-location('&', 4, 1, ' > ');
   justify-items: center;
   -ms-grid-column: 1;
@@ -182,31 +183,31 @@ body {
   background: $denver_bg_darken;
   -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2) inset;
-}
 
-.day-forecast {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-  grid-template-columns: 100%;
-  -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-
-    & > :nth-child(-n+3) {
-      @include ie-grid-margin-auto;
-      margin: auto;
-    }
-
-    @include ie-nodes-location('&', 1, 3, ' > ');
-
-    &__text, &__temp {
-      font-size: 12px;
-      color: #fff;
-    }
-
-    &__icon {
-      width: 24px;
-      height: auto;
+    &__item {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+      -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    
+        & > :nth-child(-n+3) {
+          @include ie-grid-margin-auto;
+          margin: auto;
+        }
+    
+        @include ie-nodes-location('&', 1, 3, ' > ');
+    
+        &-title, &-info {
+          font-size: 12px;
+          color: #fff;
+        }
+    
+        &-image {
+          width: 24px;
+          height: auto;
+        }
     }
 }
 
@@ -214,7 +215,7 @@ body {
   html {
     height: auto;
   }
-  .widget-container {
+  .widget-block {
     width: calc(100% - 60px);
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
@@ -223,7 +224,6 @@ body {
 
     @include ie-nodes-location('&', 2, 3, ' > *');
   }
-
 }
 
 @media screen and (min-height: 660px) and (min-width: 460px) {
@@ -233,13 +233,13 @@ body {
 }
 
 @media screen and (max-height: 1560px) and (max-width: 460px) {
-  .widget-container {
+  .widget-block {
     margin: 30px auto;
   }
 }
 
 @media screen and (max-width: 460px) {
-  .widget-container {
+  .widget-block {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: 250px 250px 250px 250px 250px 250px;
@@ -250,28 +250,27 @@ body {
   
   .city-card {
     &:nth-child(5) {
-      .city-card__icon {
+      .city-card__image {
         height: 65%;
       }
     }
 
-    &__icon {
+    &__image {
       height: 90%;
     }
 
-    &__text {
+    &__title {
       font-size: 20px;
     }
   }
 
-  .day-forecast {
-    &__icon {
+  .forecast-block__item {
+    &-image {
       width: 30px;
     }
 
-    &__text, &__temp {
+    &-title, &-info {
       font-size: 16px;
     }
   }
-
 }

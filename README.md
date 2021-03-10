@@ -1,4 +1,6 @@
 # Weather Widget
+<img src="preview.jpg" />
+
 BEM methodology, Flexbox, Grid, SCSS
 
 ### To be able to run the project, you need to take the following steps:
